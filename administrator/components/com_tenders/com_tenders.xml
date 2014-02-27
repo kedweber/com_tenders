@@ -10,6 +10,12 @@
     <version>1.0.0</version>
     <description>Tenders</description>
 
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install/install.sql</file>
+		</sql>
+	</install>
+
     <administration>
         <files folder="administrator/components/com_moyo">
             <folder>templates</folder>
