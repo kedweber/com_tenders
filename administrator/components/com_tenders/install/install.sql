@@ -21,6 +21,23 @@ CREATE TABLE `#__tenders_tenders` (
   PRIMARY KEY (`tenders_tender_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `#__fr_tenders_tenders`;
+CREATE TABLE `#__tenders_tenders` (
+  `tenders_tender_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `cck_fieldset_id` bigint(20) NOT NULL DEFAULT '1',
+  `tenders_category_id` bigint(20) NOT NULL,
+  `created_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL,
+  `modified_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL,
+  `locked_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `locked_by` int(11) NOT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`tenders_tender_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 SET FOREIGN_KEY_CHECKS = 1;
 
 -- ----------------------------
