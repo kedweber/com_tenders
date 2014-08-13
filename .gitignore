@@ -1,1 +1,11 @@
-.idea
+*
+.*
+
+!composer.json
+
+!/administrator/
+!/administrator/components/
+!/administrator/components/com_tenders/
+!/administrator/components/com_tenders/*
+!/administrator/components/com_tenders/*/*
+!/administrator/components/com_tenders/*/*/*

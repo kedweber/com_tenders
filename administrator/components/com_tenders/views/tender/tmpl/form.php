@@ -103,14 +103,21 @@ defined('KOOWA') or die('Protected Resource'); ?>
                             'check_access' => true,
                             'name' => 'categories[]',
                             'attribs' => array('id' => 'parent_id', 'multiple' => true),
-                            'selected' => $test
+                            'selected' => $test,
+                            'filter' => array('type' => 'category')
                         )); ?>
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label"><?= @text('REGIONS'); ?></label>
                     <div class="controls">
-                        <?= @helper('com://admin/taxonomy.template.helper.listbox.taxonomies', array('identifier' => 'com://admin/regions.model.regions', 'name' => 'regions[]', 'attribs' => array('multiple' => true, 'size' => 10), 'type' => 'region', 'relation' => 'ancestors')); ?>
+                        <?= @helper('com://admin/taxonomy.template.helper.listbox.taxonomies', array(
+                            'identifier' => 'com://admin/regions.model.regions',
+                            'name' => 'regions[]',
+                            'attribs' => array('multiple' => true, 'size' => 10),
+                            'type' => 'region',
+                            'relation' => 'ancestors'
+                        )); ?>
                     </div>
                 </div>
             </fieldset>
