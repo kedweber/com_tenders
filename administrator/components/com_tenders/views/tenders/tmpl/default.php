@@ -48,6 +48,11 @@ defined('KOOWA') or die('Protected Resource'); ?>
                     <th>
                         <?= @helper('grid.sort', array('column' => 'publishing_date')); ?>
                     </th>
+                    <? if($tenders->isTranslatable()) : ?>
+                        <th>
+                            <?= @text('Translations') ?>
+                        </th>
+                    <? endif; ?>
                     <th>
                         <?= @helper('grid.sort', array('column' => 'updated_on')); ?>
                     </th>
@@ -70,6 +75,14 @@ defined('KOOWA') or die('Protected Resource'); ?>
                             <td><?= $tender->geographical_zone; ?></td>
                             <td><?= $tender->programme; ?></td>
                             <td><?= $tender->publishing_date; ?></td>
+                            <? if($tender->isTranslatable()) : ?>
+                                <td>
+                                    <?= @helper('com://admin/translations.template.helper.language.translations', array(
+                                        'row' => $tender->id,
+                                        'table' => $tender->getTable()->getName()
+                                    )); ?>
+                                </td>
+                            <? endif; ?>
                             <td><?= $tender->modified_on; ?></td>
                         </tr>
                     <? endif; ?>
