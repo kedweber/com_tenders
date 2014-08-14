@@ -10,17 +10,23 @@
     <version>1.0.0</version>
     <description>Tenders</description>
 
-	<install>
-		<sql>
-			<file driver="mysql" charset="utf8">install/install.sql</file>
-		</sql>
-	</install>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">install/install.sql</file>
+        </sql>
+    </install>
 
     <administration>
         <files folder="administrator/components/com_moyo">
-            <folder>templates</folder>
+            <file>tenders.php</file>
+            <file>tenders.xml</file>
+
+            <folder>databases</folder>
+            <folder>install</folder>
+            <folder>models</folder>
+            <folder>views</folder>
         </files>
 
-	    <menu>com_tenders</menu>
+        <menu>com_tenders</menu>
     </administration>
 </extension>
