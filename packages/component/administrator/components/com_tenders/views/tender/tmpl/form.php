@@ -98,7 +98,7 @@ defined('KOOWA') or die('Protected Resource'); ?>
                             'check_access' => true,
                             'name' => 'categories[]',
                             'attribs' => array('id' => 'parent_id', 'multiple' => true),
-                            'selected' => $tender->categories->getColumn('id'),
+                            'selected' => $tender->categories ? $tender->categories->getColumn('id') : array(),
                             'filter' => array('type' => 'category')
                         )); ?>
                     </div>
@@ -108,9 +108,10 @@ defined('KOOWA') or die('Protected Resource'); ?>
                     <div class="controls">
                         <?= @helper('com://admin/taxonomy.template.helper.listbox.taxonomies', array(
                             'identifier' => 'com://admin/regions.model.regions',
+                            'selected' => $tender->regions ? $tender->regions->getColumn('id') : array(),
                             'name' => 'regions[]',
                             'attribs' => array('multiple' => true, 'size' => 10),
-                            'type' => 'region',
+                            'type' => 'regions',
                             'relation' => 'ancestors'
                         )); ?>
                     </div>
