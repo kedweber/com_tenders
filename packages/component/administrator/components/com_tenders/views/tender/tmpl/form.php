@@ -92,17 +92,13 @@ defined('KOOWA') or die('Protected Resource'); ?>
                 <div class="control-group">
                     <label class="control-label"><?= @text('CATEGORIES'); ?></label>
 
-                    <pre>
-                        <? print_r($tender->categories); ?>
-                    </pre>
-
                     <div class="controls">
                         <?= @helper('com://admin/makundi.template.helper.listbox.categories', array(
                             'deselect' => true,
                             'check_access' => true,
                             'name' => 'categories[]',
                             'attribs' => array('id' => 'parent_id', 'multiple' => true),
-                            'selected' => null,
+                            'selected' => $tender->categories->getColumn('id'),
                             'filter' => array('type' => 'category')
                         )); ?>
                     </div>

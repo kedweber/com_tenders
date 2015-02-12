@@ -7,17 +7,17 @@
  * @package     CTA Components
  * @subpackage  Com_Tenders
  */
- 
+
 defined('KOOWA') or die('Protected Resource');
 
 class ComTendersDatabaseTableTenders extends KDatabaseTableDefault
 {
     public function _initialize(KConfig $config)
     {
-        $relationable = $this->getBehavior('com://admin/taxonomy.database.behavior.relationable', 
+        $relationable = $this->getBehavior('com://admin/taxonomy.database.behavior.relationable',
             array(
                 'ancestors' => array(
-                    'category' => array(
+                    'categories' => array(
                         'identifier' => 'com://admin/makundi.model.categories',
                         'identity_column' => 'makundi_category_id',
                         'table' => '#__makundi_categories',
@@ -31,7 +31,7 @@ class ComTendersDatabaseTableTenders extends KDatabaseTableDefault
                 )
             )
         );
-        
+
         $config->append(array(
             'behaviors' => array(
                 'lockable',
