@@ -7,7 +7,7 @@
  * @package     CTA Components
  * @subpackage  Com_Tenders
  */
- 
+
 defined('KOOWA') or die('Protected Resource'); ?>
 
 <?= @helper('behavior.mootools'); ?>
@@ -92,18 +92,17 @@ defined('KOOWA') or die('Protected Resource'); ?>
                 <div class="control-group">
                     <label class="control-label"><?= @text('CATEGORIES'); ?></label>
 
-                    <? if($tender->isRelationable()) : ?>
-                        <? $test = $tender->getRelation(array('type' => 'ancestors', 'filter' => array('type' => 'category')))->getIds('taxonomy_taxonomy_id'); ?>
-                    <? endif; ?>
+                    <pre>
+                        <? print_r($tender->categories); ?>
+                    </pre>
 
                     <div class="controls">
                         <?= @helper('com://admin/makundi.template.helper.listbox.categories', array(
-                            'value' => 'taxonomy_taxonomy_id',
                             'deselect' => true,
                             'check_access' => true,
                             'name' => 'categories[]',
                             'attribs' => array('id' => 'parent_id', 'multiple' => true),
-                            'selected' => $test,
+                            'selected' => null,
                             'filter' => array('type' => 'category')
                         )); ?>
                     </div>

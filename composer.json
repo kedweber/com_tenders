@@ -1,55 +1,17 @@
 {
-    "name": "cta/tender-manager",
-    "description": "Tender manager created for cta.int",
-    "license": "GPL-V3",
+    "name": "cta/tenders",
+    "type": "joomlatools-installer",
+    "description": "Tenders Component",
+    "keywords": ["joomla", "nooku", "tenders"],
+    "homepage": "https://github.com/cta-int/com_tenders",
     "authors": [
         {
-            "name": "Moyo Web Architects",
-            "email": "info@moyoweb.nl",
-            "homepage": "http://moyoweb.nl"
+            "name": "Jasper van Rijbroek",
+            "email": "jasper@moyoweb.nl",
+            "homepage": "http://www.moyoweb.nl"
         }
     ],
-    "repositories": [ {
-        "name": "cta/router",
-        "type": "vcs",
-        "url": "https://github.com/cta-int/router.git"
-    },{
-        "name": "cta/default",
-        "type": "vcs",
-        "url": "https://github.com/cta-int/moyo.git"
-    },{
-        "name": "cta/taxonomy",
-        "type": "vcs",
-        "url": "https://github.com/cta-int/taxonomy.git"
-    },{
-        "name": "cta/cck",
-        "type": "vcs",
-        "url": "https://github.com/cta-int/cck.git"
-    },{
-        "name": "cta/translations",
-        "type": "vcs",
-        "url": "https://github.com/cta-int/translations.git"
-    },{
-        "name": "cta/categories",
-        "type": "vcs",
-        "url": "https://github.com/cta-int/makundi.git"
-    },{
-        "name": "cta/regions",
-        "type": "vcs",
-        "url": "https://github.com/cta-int/regions.git"
-    }],
     "require": {
-        "cta/router": "2.0.*",
-        "cta/translations": "1.1.*",
-        "cta/cck": "1.0.*",
-        "cta/taxonomy": "1.0.*",
-        "cta/default": "1.0.*",
-        "cta/regions": "1.0.*",
-        "cta/categories": "1.2.*",
-        "symfony/routing": "*",
-        "symfony/yaml": "*",
-        "symfony/config": "*",
-        "symfony/expression-language": "*",
-        "cloudinary/cloudinary_php": "1.0.11"
+        "joomlatools/installer": "*"
     }
 }
