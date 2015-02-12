@@ -23,6 +23,9 @@ class ComTendersDatabaseTableTenders extends KDatabaseTableDefault
                         'table' => '#__makundi_categories',
                         'sort' => 'title',
                     ),
+                    'regions' => array(
+                        'identifier' => 'com://admin/regions.model.regions',
+                    )
                 ),
                 'descendants' => array(
                     'articles' => array(
