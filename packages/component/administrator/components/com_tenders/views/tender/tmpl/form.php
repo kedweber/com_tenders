@@ -7,7 +7,7 @@
  * @package     CTA Components
  * @subpackage  Com_Tenders
  */
- 
+
 defined('KOOWA') or die('Protected Resource'); ?>
 
 <?= @helper('behavior.mootools'); ?>
@@ -92,18 +92,13 @@ defined('KOOWA') or die('Protected Resource'); ?>
                 <div class="control-group">
                     <label class="control-label"><?= @text('CATEGORIES'); ?></label>
 
-                    <? if($tender->isRelationable()) : ?>
-                        <? $test = $tender->getRelation(array('type' => 'ancestors', 'filter' => array('type' => 'category')))->getIds('taxonomy_taxonomy_id'); ?>
-                    <? endif; ?>
-
                     <div class="controls">
                         <?= @helper('com://admin/makundi.template.helper.listbox.categories', array(
-                            'value' => 'taxonomy_taxonomy_id',
                             'deselect' => true,
                             'check_access' => true,
                             'name' => 'categories[]',
                             'attribs' => array('id' => 'parent_id', 'multiple' => true),
-                            'selected' => $test,
+                            'selected' => $tender->categories ? $tender->categories->getColumn('id') : array(),
                             'filter' => array('type' => 'category')
                         )); ?>
                     </div>
@@ -113,9 +108,10 @@ defined('KOOWA') or die('Protected Resource'); ?>
                     <div class="controls">
                         <?= @helper('com://admin/taxonomy.template.helper.listbox.taxonomies', array(
                             'identifier' => 'com://admin/regions.model.regions',
+                            'selected' => $tender->regions ? $tender->regions->getColumn('id') : array(),
                             'name' => 'regions[]',
                             'attribs' => array('multiple' => true, 'size' => 10),
-                            'type' => 'region',
+                            'type' => 'regions',
                             'relation' => 'ancestors'
                         )); ?>
                     </div>

@@ -17,10 +17,10 @@
 	</install>
 
     <administration>
-        <files folder="administrator/components/com_moyo">
+        <files folder="administrator/components/com_tenders">
             <file>tenders.php</file>
             <file>tenders.xml</file>
-            
+
             <folder>databases</folder>
             <folder>install</folder>
             <folder>models</folder>
