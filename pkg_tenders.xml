@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="1.6">
     <name>Tenders</name>
-    <author>Jasper van Rijbroek</author>
+    <author>Moyo Web Architects</author>
     <creationDate>February 2015</creationDate>
     <packagename>tenders</packagename>
     <version>1.0.0</version>
