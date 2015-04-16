@@ -27,7 +27,7 @@ section:
 {
     "name": "cta/tenders",
     "type": "vcs",
-    "url": "https://github.com/cta-int/com-tenders.git"
+    "url": "https://github.com/cta-int/com_tenders.git"
 }
 ```
 
