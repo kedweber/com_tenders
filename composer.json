@@ -1,9 +1,9 @@
 {
-    "name": "cta/tenders",
+    "name": "moyo/com_tenders",
     "type": "joomlatools-installer",
     "description": "Tenders Component",
     "keywords": ["joomla", "nooku", "tenders"],
-    "homepage": "https://github.com/cta-int/com_tenders",
+    "homepage": "https://github.com/kedweber/com_tenders",
     "authors": [
         {
             "name": "Jasper van Rijbroek",
